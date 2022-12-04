@@ -11,8 +11,8 @@ WORKDIR /usr/src/app
 COPY package.json ./
 
 # If you are building your code for production
-#RUN npm install --only=production
-RUN npm install
+RUN npm install --only=production
+#RUN npm install
 
 # Bundle app source
 COPY --chown=node:node . .
