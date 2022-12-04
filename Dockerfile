@@ -17,8 +17,6 @@ RUN npm install
 # Bundle app source
 COPY --chown=node:node . .
 
-EXPOSE 6000:6000
-EXPOSE 2000:2000
-EXPOSE 2000:2000/udp
+EXPOSE 3300:3300
 
 CMD [ "npm", "start" ]
