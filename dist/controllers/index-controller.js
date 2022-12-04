@@ -12,10 +12,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.IndexController = void 0;
 const core_1 = require("@overnightjs/core");
 const http_status_codes_1 = require("http-status-codes");
+const servers_1 = require("../models/servers");
+const users_1 = require("../models/users");
 let IndexController = class IndexController {
-    index(req, res) {
+    async index(req, res) {
+        let servers = await servers_1.Servers.findAll();
+        let arr = [];
+        for (let s of servers) {
+            arr.push({
+                server: s,
+                users: await users_1.Users.count()
+            });
+        }
         return res.status(http_status_codes_1.StatusCodes.OK).json({
             message: 'index',
+            servers: arr,
         });
     }
 };
@@ -23,7 +34,7 @@ __decorate([
     (0, core_1.Get)(''),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], IndexController.prototype, "index", null);
 IndexController = __decorate([
     (0, core_1.Controller)('')
