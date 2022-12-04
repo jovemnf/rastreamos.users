@@ -20,7 +20,10 @@ let IndexController = class IndexController {
         let arr = [];
         for (let s of servers) {
             arr.push({
-                server: s,
+                server: {
+                    title: s.title,
+                    id: s.id
+                },
                 users: await users_1.Users.count()
             });
         }
