@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersController = void 0;
 const core_1 = require("@overnightjs/core");
 const auth_check_1 = require("./middlewares/auth-check");
-const secure_request_1 = require("../utils/secure-request");
 const add_users_1 = require("./routers/users/add-users");
 const delete_user_1 = require("./routers/users/delete-user");
 const update_user_1 = require("./routers/users/update-user");
@@ -51,56 +50,56 @@ __decorate([
     (0, core_1.Get)(':login_id/login'),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "byLogin", null);
 __decorate([
     (0, core_1.Get)(':username/username'),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "byUsername", null);
 __decorate([
     (0, core_1.Get)(':cliente_id/client'),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "getAll", null);
 __decorate([
     (0, core_1.Post)(),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "add", null);
 __decorate([
     (0, core_1.Put)(':id'),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "update", null);
 __decorate([
     (0, core_1.Delete)(':id'),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "delete", null);
 __decorate([
     (0, core_1.Delete)(':cliente_id/client'),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "deleteByCliente", null);
 __decorate([
     (0, core_1.Delete)(':login_id/login'),
     (0, core_1.Middleware)([auth_check_1.authCheck]),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [secure_request_1.SecureRequest, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UsersController.prototype, "deleteByLogin", null);
 UsersController = __decorate([

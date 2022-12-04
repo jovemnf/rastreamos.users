@@ -1,5 +1,5 @@
 import { Controller, Get } from "@overnightjs/core";
-import { Response } from "express";
+import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 
 @Controller('')

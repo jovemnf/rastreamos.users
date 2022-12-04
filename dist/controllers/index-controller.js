@@ -22,7 +22,7 @@ let IndexController = class IndexController {
 __decorate([
     (0, core_1.Get)(''),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Request, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], IndexController.prototype, "index", null);
 IndexController = __decorate([
