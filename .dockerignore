@@ -1,0 +1,20 @@
+#Database
+mysql
+
+# Git
+.git
+.gitignore
+
+# Docker configuration
+Dockerfile
+Makefile
+docker-compose.yml
+package-lock.json
+
+# NPM dependencies
+node_modules/
+
+# Other
+.idea
+tests/
+

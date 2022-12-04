@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+    rastreamos-users:
+        container_name: rastreamos.users
+        restart: always
+        environment:
+            - "TZ=America/Sao_Paulo"
+        build: .
+        ports:
+            - "3300:3300"
+
+        networks:
+            - rastreamos-network
+
+networks:
+    rastreamos-network:
+        external: true
