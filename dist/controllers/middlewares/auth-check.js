@@ -5,10 +5,10 @@ const http_status_codes_1 = require("http-status-codes");
 const jwt = require('jsonwebtoken');
 const authCheck = async (req, res, next) => {
     try {
-        let access_key = req.headers['access_key'];
+        let access_key = req.headers['accesskey'];
         if (!access_key) {
             return res.status(http_status_codes_1.StatusCodes.UNAUTHORIZED).json({
-                message: 'access_key'
+                message: 'accesskey'
             });
         }
         let auth = req.headers['authorization'];

@@ -5,11 +5,11 @@ const jwt = require('jsonwebtoken');
 
 export const authCheck = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        let access_key = req.headers['access_key'];
+        let access_key = req.headers['accesskey'];
 
         if (! access_key) {
             return res.status(StatusCodes.UNAUTHORIZED).json({
-                message: 'access_key'
+                message: 'accesskey'
             });
         }
 

@@ -8,11 +8,11 @@ export const authSync = async (req: Request, res: Response) => {
   try {
       Logger.info(JSON.stringify(req.headers));
 
-      let access_key = req.headers['access_key'];
+      let access_key = req.headers['accesskey'];
 
       if (! access_key) {
           return res.status(StatusCodes.UNAUTHORIZED).json({
-              message: 'access_key'
+              message: 'accesskey'
           });
       }
 
