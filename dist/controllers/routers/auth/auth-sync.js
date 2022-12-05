@@ -10,7 +10,6 @@ const servers_1 = require("../../../models/servers");
 const jwt = require('jsonwebtoken');
 const authSync = async (req, res) => {
     try {
-        jet_logger_1.default.info(JSON.stringify(req.headers));
         let access_key = req.headers['accesskey'];
         if (!access_key) {
             return res.status(http_status_codes_1.StatusCodes.UNAUTHORIZED).json({
