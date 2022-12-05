@@ -19,7 +19,7 @@ export class Users extends Model {
 
     @Column({
         type: DataType.BIGINT,
-        allowNull: false
+        allowNull: true
     })
     cliente_id: number | undefined;
 

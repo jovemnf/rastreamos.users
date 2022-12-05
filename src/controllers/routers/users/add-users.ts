@@ -8,12 +8,6 @@ export const addUsers = async (req: SecureRequest, res: Response) => {
     try {
         Logger.info(req.body, true);
 
-        if (! req.body.cliente_id) {
-            return res.status(StatusCodes.PAYMENT_REQUIRED).json({
-                message: 'not cliente_id',
-            });
-        }
-
         if (! req.body.login_id) {
             return res.status(StatusCodes.PAYMENT_REQUIRED).json({
                 message: 'not login_id',

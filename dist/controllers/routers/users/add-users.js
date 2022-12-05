@@ -10,11 +10,6 @@ const http_status_codes_1 = require("http-status-codes");
 const addUsers = async (req, res) => {
     try {
         jet_logger_1.default.info(req.body, true);
-        if (!req.body.cliente_id) {
-            return res.status(http_status_codes_1.StatusCodes.PAYMENT_REQUIRED).json({
-                message: 'not cliente_id',
-            });
-        }
         if (!req.body.login_id) {
             return res.status(http_status_codes_1.StatusCodes.PAYMENT_REQUIRED).json({
                 message: 'not login_id',
